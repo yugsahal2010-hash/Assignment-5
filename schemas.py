@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 class WinProbabilityResponse(BaseModel):
     runs_needed: int
@@ -7,5 +7,6 @@ class WinProbabilityResponse(BaseModel):
     win_probability_score: float
     prediction: str
 
+
 class ErrorResponse(BaseModel):
-    detail: str
+    detail: str    
