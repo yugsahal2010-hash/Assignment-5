@@ -1,5 +1,14 @@
 from pydantic import BaseModel, Field
 
+
+class WinProbabilityInput(BaseModel):
+    target: int
+    current_score: int
+    balls_bowled: int
+    total_overs: int
+    wickets_fallen: int
+
+
 class WinProbabilityResponse(BaseModel):
     runs_needed: int
     balls_remaining: int
@@ -9,4 +18,4 @@ class WinProbabilityResponse(BaseModel):
 
 
 class ErrorResponse(BaseModel):
-    detail: str    
+    detail: str
